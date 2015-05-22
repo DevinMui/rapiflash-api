@@ -1,6 +1,6 @@
 class FloodsController < ApplicationController
   def index
-    @floods = Flood.all.order('created_at desc')
+    @floods = Flood.all.order('created_at desc').limit(1000)
     render json: @floods
   end
   def show
@@ -18,7 +18,7 @@ class FloodsController < ApplicationController
   end
   private
   def flood_params
-    params.require(:flood).permit(:normal_level,:current_level,:location,:flooded)
+    params.require(:flood).permit(:normal_level,:current_level,:location,:flooded,:upstream)
   end
 end
 __END__
