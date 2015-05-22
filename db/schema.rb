@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150522014316) do
+ActiveRecord::Schema.define(version: 20150522022436) do
 
   create_table "floods", force: true do |t|
     t.float    "normal_level"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20150522014316) do
     t.boolean  "flooded"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "upstream"
+    t.integer  "upstream"
   end
 
 end
