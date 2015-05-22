@@ -26,8 +26,8 @@ Sample CURL request in to this application
 curl -H "Content-Type: application/json" "http://api.devinmui.c9.io/api/v1/floods" -d '
 {
   "flood": {
-    "normal_level":3.5,
-    "current_level":5,
+    "normal_level":6,
+    "current_level":8,
     "location":"Georgia",
     "flooded":true
   }
