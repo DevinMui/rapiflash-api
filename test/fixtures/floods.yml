@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  normal_level: 1.5
+  location: MyString
+  current_level: 1.5
+  flooded: false
+
+two:
+  normal_level: 1.5
+  location: MyString
+  current_level: 1.5
+  flooded: false
