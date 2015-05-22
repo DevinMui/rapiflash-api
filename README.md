@@ -6,7 +6,20 @@ Communicate with Rapiflash through out the world using the official API
 1. `GET /api/v1/floods` - gets the latest 1000 Rapiflash data
 2. `GET /api/v1/floods/:id` - gets the specific Rapiflash device data
 3. `POST /api/v1/floods` - creates new Rapiflash device data
-4. 
+
+### Sample Request
+
+`curl -v 'api.devinmui.c9.io/api/v1/floods'`
+
+returns `[{"id":5,"normal_level":6.0,"location":"Georgia","current_level":8.0,"flooded":true,"created_at":"2015-05-22T01:53:46.659Z","updated_at":"2015-05-22T01:53:46.659Z","upstream":null},{"id":4,"normal_level":3.5,"location":"Georgia","current_level":5.0,"flooded":true,"created_at":"2015-05-22T01:18:15.395Z","updated_at":"2015-05-22T01:18:15.395Z","upstream":null},{"id":3,"normal_level":3.5,"location":"Georgia","current_level":5.0,"flooded":true,"created_at":"2015-05-22T00:32:26.934Z","updated_at":"2015-05-22T00:32:26.934Z","upstream":null},{"id":2,"normal_level":3.0,"location":"Australia","current_level":5.0,"flooded":false,"created_at":"2015-05-22T00:09:26.892Z","updated_at":"2015-05-22T00:09:26.892Z","upstream":null},{"id":1,"normal_level":4.5,"location":"Australia","current_level":5.0,"flooded":false,"created_at":"2015-05-21T23:55:39.455Z","updated_at":"2015-05-21T23:55:39.455Z","upstream":null}`
+
+`curl -v 'api.devinmui.c9.io/api/v1/floods/1'`
+
+returns `{"id":1,"normal_level":4.5,"location":"Australia","current_level":5.0,"flooded":false,"created_at":"2015-05-21T23:55:39.455Z","updated_at":"2015-05-21T23:55:39.455Z","upstream":null}`
+
+`curl -H "Content-Type: application/json" "http://api.devinmui.c9.io/api/v1/floods" -d '{"flood": {"normal_level":6,"current_level":8,"location":"Georgia","flooded":true}}'`
+
+returns `{"message":"Resource created"}`
 
 ### Contributors
 
